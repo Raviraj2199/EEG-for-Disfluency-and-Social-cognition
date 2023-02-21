@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+{% block content %}
+{% if message %}
+        <div class="alert alert-danger">{{ message }}</div>
+    {% endif %}
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <center><h1>Depression Predictor</h1></center>
+            <div class="card card-body" style="border: 1px solid black;">
+                <form class="form-horizontal" action="{{ url_for('predictPage') }}" method="POST">
+                    <div class="form-group">
+                        <input style="border: 1px solid black;" class="form-control" type="text" name="# mean_0_a" placeholder="Enter mean_0_a">
+                    </div>
+            		<div class="form-group">
+                        <input style="border: 1px solid black;" class="form-control" type="text" name="mean_1_a" placeholder="Enter mean_1_a">
+                    </div>
+            		<div class="form-group">
+                        <input style="border: 1px solid black;" class="form-control" type="text" name="mean_2_a" placeholder=" Enter mean_2_a">
+                    </div>
+            		<div class="form-group">
+                        <input style="border: 1px solid black;" class="form-control" type="text" name="mean_3_a" placeholder="Enter mean_3_a">
+                    </div>
+            		<div class="form-group">
+                        <input style="border: 1px solid black;" class="form-control" type="text" name="mean_4_a" placeholder="Enter mean_4_a">
+                    </div>
+            		<input type="submit" class="btn btn-info btn-block" value="Predict">
+                </form>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+{% endblock %}

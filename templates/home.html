@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+{% block content %}
+{% if message %}
+        <div class="alert alert-danger">{{ message }}</div>
+    {% endif %}
+<div class="container">
+    <div class="card card-body" style="border: 1px solid black; box-shadow: 0 0 10px black;">
+        <h2>EEG Depression .</h2>
+        <br>
+        <br>
+        <h3>Information about the EEG Prediction.</h3>
+        <br>
+        <div class="row">
+            <div class="col-md-12 card card-body" style="box-shadow: 0 0 5px black; margin: 5px;">
+                <h4>Depression</h4>
+                <p>Electroencephalogram (EEG) may be used as a tool for making an objective diagnosis of depression.</p>
+            </div>
+        </div>
+
+
+
+        
+
+    </div>
+</div>
+{% endblock %}
